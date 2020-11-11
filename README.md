@@ -1,5 +1,7 @@
 # A sample django project to confirm `force_insert` option of `save()`
 
+This is a sample django project to confirm [How Django knows to UPDATE vs. INSERT](https://docs.djangoproject.com/en/2.2/ref/models/instances/#how-django-knows-to-update-vs-insert).
+
 ## Steps
 
 ### 1. Clone this app
@@ -16,7 +18,7 @@ $ python manage.py migrate
 
 ### 3. Modify table definition by hand
 
-Because Django's model doesn't allow multi-column primary key, it is necessary to confirm what SQL does `save()` without `force_insert` option execute.
+Because [Django's model doesn't allow multi-column primary key](https://code.djangoproject.com/wiki/MultipleColumnPrimaryKeys), it is necessary to confirm what SQL does `save()` without `force_insert` option execute.
 
 ```
 $ sqlite3 db.sqlite
